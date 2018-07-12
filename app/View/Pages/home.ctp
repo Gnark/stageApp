@@ -42,7 +42,9 @@
                 <li class="nav-item">
                   <a class="nav-link active" href="#">
                     <span data-feather="home"></span>
-                    Stock <!--<span class="sr-only">(current)</span>-->
+                    <!--<span class="sr-only">(current)</span>-->
+                    <?php echo $this->Html->link('Tags',
+                    array('controller' => 'tags', 'action' => 'all_tags')); ?>  
                   </a>
                 </li>
                 <li class="nav-item">

@@ -14,14 +14,25 @@ class Tag extends AppModel{
 		if ($client_id == null)
         	throw new NotFoundException(__('Client non valide'));
         $tags = $this->query("SELECT t.id, pr.id
-        					FROM tags t, clients cl, produits pr, materiel_externes me
-        					WHERE (t.produit_id = pr.id
-        					OR t.materiel_externe_id = me.id)
-        					AND t.client_id = cl.id
-        					AND t.client_id = ".$client_id
-        					);
+        			FROM tags t, clients cl, produits pr, materiel_externes me
+        			WHERE (t.produit_id = pr.id
+        			OR t.materiel_externe_id = me.id)
+        			AND t.client_id = cl.id
+        			AND t.client_id = ".$client_id
+        			);
         return $tags;
 	}
+
+        public function get_all_tags(){
+                $tags = $this->query("SELECT t.id,cl.nom, cl.prenom, pr.id
+                                FROM tags t, clients cl, produits pr, materiel_externes me
+                                WHERE (t.produit_id = pr.id
+                                OR t.materiel_externe_id = me.id)
+                                AND t.client_id = cl.id
+                                GROUP BY cl.id"
+                                );
+        return $tags;
+        }
 }
 
 ?>

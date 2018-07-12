@@ -7,7 +7,7 @@
 	<meta name="author" content="">
 	<!--link rel="icon" href="../../../../favicon.ico"-->
 
-	<title>Client</title>
+	<title>Carte de *insere client ici*</title>
 
 	<link href="" rel="stylesheet">
 </head>
@@ -155,11 +155,6 @@
 			</td> 
 			<td>
 				<?php echo $data_client['carte']['facturee']?'oui':'non' ?>
-			</td>
-			<td>
-				<?php echo $this->Html->link('Voir la carte',
-                    array('controller' => 'cartes', 'action' => 'carte_client', $$data_client['cl']['id']));
-                ?>
 			</td>
 
 		</tr>

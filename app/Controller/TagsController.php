@@ -15,6 +15,13 @@ class TagsController extends AppController{
 
 	}
 
+	public function all_tags() {
+		$data = $this->Tag->get_all_tags();
+		//$data = $this->Tag->find('all', array('conditions' => array('Tag.client_id' => "$client_id")));
+		$this->set('data', $data);
+
+	}
+
 	/*public function client($id = null){
 		if ($id == null)
         	throw new NotFoundException(__('Fiche non valide'));
