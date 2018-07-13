@@ -158,7 +158,7 @@
 			</td>
 			<td>
 				<?php echo $this->Html->link('Voir la carte',
-                    array('controller' => 'cartes', 'action' => 'carte_client', $$data_client['cl']['id']));
+                    array('controller' => 'cartes', 'action' => 'carte_client', $data_client['cl']['id']));
                 ?>
 			</td>
 

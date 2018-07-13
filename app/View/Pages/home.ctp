@@ -40,13 +40,11 @@
             <div class="sidebar-sticky">
               <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#">
                     <span data-feather="home"></span>
                     <!--<span class="sr-only">(current)</span>-->
                     <?php echo $this->Html->link('Tags',
                     array('controller' => 'tags', 'action' => 'all_tags')); ?>  
-                  </a>
-                </li>
+                 </li>
                 <li class="nav-item">
                   <span data-feather="camera"></span>
                   <?php echo $this->Html->link('Produit',
@@ -63,18 +61,20 @@
                   array('controller' => 'fiches', 'action' => 'all_fiches')); ?>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
                     <span data-feather="bar-chart-2"></span>
                     Interventions
-                  </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
                     <span data-feather="alert-circle"></span>
                     <?php echo $this->Html->link('Problèmes connus',
                     array('controller' => 'problemes', 'action' => 'all_problemes')); ?> 
-                  </a>
                 </li>
+                <li class="nav-item">
+                    <span data-feather="clipboard"></span>
+                    <!--<span class="sr-only">(current)</span>-->
+                    <?php echo $this->Html->link('Reparations',
+                    array('controller' => 'reparations', 'action' => 'all_reparations')); ?>  
+                 </li>
               </ul>
 
               <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
