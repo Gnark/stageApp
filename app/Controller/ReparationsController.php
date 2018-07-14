@@ -6,8 +6,8 @@ class ReparationsController extends AppController{
 
 	public function all_reparations(){
 
-		$repa = $this->Reparation->get_all_info_reparations();
-		$this->set('repa', $repa);
+		$rep = $this->Reparation->get_info_all_reparations();
+		$this->set('rep', $rep);
 
 	}
 	

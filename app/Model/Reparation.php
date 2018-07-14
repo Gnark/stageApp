@@ -8,7 +8,7 @@ class Reparation extends AppModel{
 	public $belongsTo = 'Produit';
 
 	public function get_info_all_reparations(){
-		return $this->query('SELECT r.id, r.date_echeance, r.cout,cl.nom, cl.prenom, m.nom_modele
+		return $this->query('SELECT r.id, r.date_echeance, r.cout, r.finie, cl.nom, cl.prenom, m.nom_modele
 							FROM reparations r, clients cl, produits pr, modeles m
 							WHERE r.produit_id = pr.id 
 							AND m.id = pr.modele_id

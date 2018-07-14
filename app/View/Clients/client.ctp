@@ -13,7 +13,7 @@
 </head>
 <body>
 
-
+	<?php require_once 'C:\wamp64\www\cakephp\View\Pages\home.ctp'; ?>
 	<table class="entier">
 		<tr>
 			<th colspan="4">Informations du Client</th>

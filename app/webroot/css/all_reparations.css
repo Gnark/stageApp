@@ -1,0 +1,21 @@
+.cercle_vert{
+
+	padding: 10px 11px;
+	background: green;
+	height: 2px;
+	border-radius: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 2px;
+}
+
+.cercle_rouge{
+
+	padding: 10px 11px;
+	background: red;
+	height: 2px;
+	border-radius: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 2px;
+}
