@@ -5,7 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<!--link rel="icon" href="../../../../favicon.ico"-->
+	<!--link rel="icon" href="../../../../favicon.ico"--> 
+  </head>
 
 	<title>Client</title>
 
@@ -13,7 +14,8 @@
 </head>
 <body>
 
-	<?php require_once 'C:\wamp64\www\cakephp\View\Pages\home.ctp'; ?>
+	<?php include '/../Menu/menu.ctp';?>
+	
 	<table class="entier">
 		<tr>
 			<th colspan="4">Informations du Client</th>

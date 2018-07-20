@@ -12,6 +12,9 @@
 	<link href="" rel="stylesheet">
 </head>
 <body>
+
+	<?php include '/../Menu/menu.ctp';?>
+	
 	<table>
 		<tr>
 			<th>Nom</th>
@@ -20,31 +23,31 @@
 			<!--th>Créée le</th-->
 			<th></th>
 		</tr>
-		<!--?php print_r($data);?-->
+		<?php print_r($data);?>
 		
 
 		<?php foreach ($data as $client): ?>
 			<tr>
 				<td>
 					
-					<?php echo $this->Html->link($client['clients']['nom'],
-					array('controller' => 'clients', 'action' => 'client', $client['clients']['id'])); ?>
+					<?php echo $this->Html->link($client['Client']['nom'],
+					array('controller' => 'Client', 'action' => 'client', $client['Client']['id'])); ?>
 					
 				</td>
 				<td>
-					<?php echo $client['clients']['prenom'];
+					<?php echo $client['Client']['prenom'];
 					?>
 					
 				</td>
 				<td>
-					<?php echo $client['clients']['email']; ?>
+					<?php echo $client['Client']['email']; ?>
 				</td>
 				
 				<td>
 
 					<?php //afficher que si role = admin
 					echo $this->Html->link('Modifer client',
-						array('controller' => 'clients', 'action' => 'modif_client', $client['clients']['id']))
+						array('controller' => 'Client', 'action' => 'modif_client', $client['Client']['id']))
 						?>
 					</td>
 				</tr>

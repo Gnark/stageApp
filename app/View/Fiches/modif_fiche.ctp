@@ -18,6 +18,9 @@
 	<link href="modif_fiche.css" rel="stylesheet">
 </head>
 <body>
+
+	<?php include '/../Menu/menu.ctp';?>
+
 	<form>
 		<table class="entier">
 			<tr>

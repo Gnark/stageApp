@@ -9,8 +9,8 @@ class Modele extends AppModel{
 	/*public function get_nom_modele_produit ($id = null){
 		return $this->query("SELECT nom_modele
 							FROM modeles
-							WHERE id = ".$id);*/
-	}
+							WHERE id = ".$id);
+	}*/
 }
 
 ?>

@@ -12,6 +12,9 @@
 	<link href="" rel="stylesheet">
 </head>
 <body>
+
+	<?php include '/../Menu/menu.ctp';?>
+	
 	<table>
 		<tr>
 			<th colspan="4">Tags</th>

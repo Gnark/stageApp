@@ -13,6 +13,7 @@
 </head>
 <body>
 
+	<?php include '/../Menu/menu.ctp';?>
 
 	<table class="entier">
 		<tr>

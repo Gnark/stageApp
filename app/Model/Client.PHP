@@ -10,6 +10,7 @@ class Client extends AppModel{
 	public $belongsTo=array('Adresse','Probleme');
 
 	public $uses=array('Tag','Adresse');
+	public $actsAs = array('Containable'); 
 
 
 	public function get_info_all_clients(){

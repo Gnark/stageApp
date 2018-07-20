@@ -13,6 +13,9 @@
 </head>
 <body>
 
+	<?php include '/../Menu/menu.ctp';?>
+
+	
 
 
 </body>

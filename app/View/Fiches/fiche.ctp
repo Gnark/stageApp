@@ -18,6 +18,8 @@
 	<link href="fiche.css" rel="stylesheet">
 </head>
 <body>
+
+	<?php include '/../Menu/menu.ctp';?>
 	
 	<table class="entier">
 		<tr>

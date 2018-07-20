@@ -12,6 +12,9 @@
 	<link href="" rel="stylesheet">
 </head>
 <body>
+
+	<?php include '/../Menu/menu.ctp';?>
+
 	<table>
 		<tr>
 			<th colspan="3">Tags de <?php echo $client['nom']." ".$client['prenom']  ?></th>

@@ -1,2 +1,2 @@
-1531561353
-a:2:{i:0;b:0;s:4:"name";a:1:{s:32:"cc169452b6da0877a2fd24a00a9acfa2";s:35:"`fiche_de_prise_en_charge_materiel`";}}
+1532100954
+a:3:{i:0;b:0;s:4:"name";a:7:{s:32:"cc169452b6da0877a2fd24a00a9acfa2";s:35:"`fiche_de_prise_en_charge_materiel`";s:32:"ece1f59cce83175769ed20f0b8edf57d";s:13:"`Client`.`id`";s:32:"ea5761a2e01944e091308d7c3cf5006d";s:14:"`Client`.`nom`";s:32:"59689f0afe7e3a4cbed49b40c7fd8be8";s:17:"`Client`.`prenom`";s:32:"86e702689bf30de735385ee97362a2c5";s:16:"`Client`.`email`";s:32:"0b56e967fca2b40dba5709f5a0a03fd1";s:9:"`clients`";s:32:"887027b18bc43bba9d9c7932932e6a48";s:8:"`Client`";}s:6:"fields";a:1:{s:32:"8f5e5d45571926fdccb6e130cebc5ce3";a:4:{i:0;s:13:"`Client`.`id`";i:1;s:14:"`Client`.`nom`";i:2;s:17:"`Client`.`prenom`";i:3;s:16:"`Client`.`email`";}}}

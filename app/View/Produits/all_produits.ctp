@@ -12,6 +12,9 @@
 	<link href="all_fiche.css" rel="stylesheet">
 </head>
 <body>
+
+	<?php include '/../Menu/menu.ctp';?>
+	
 	<table>
 		<tr>
 			<th>Id produit</th>

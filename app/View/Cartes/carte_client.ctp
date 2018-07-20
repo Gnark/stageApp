@@ -13,10 +13,11 @@
 </head>
 <body>
 
+	<?php include '/../Menu/menu.ctp';?>
 
 	<table class="entier">
 		<tr>
-			<th colspan="4">Carte de <?php echo $carte['cl']['nom']." ".$carte['cl']['prenom'] ?></th>
+			<th colspan="4">Carte de <?php echo $carte['Client']['nom']." ".$carte['Client']['prenom'] ?></th>
 		</tr>
 		<tr>
 			<td rowspan="2">Propriétaire</td>
@@ -25,8 +26,8 @@
 			</td>
 			<td colspan="2">
 				<?php print_r($carte);?>
-				<?php print_r($i);?>
-				<?php echo $carte['cl']['nom']; ?>
+				<!--?php print_r($i);?-->
+				<?php echo $carte['Client']['nom']; ?>
 			</td>
 		</tr>
 		<tr>
@@ -34,7 +35,7 @@
 				Prénom
 			</td>
 			<td colspan="2">
-				<?php echo $carte['cl']['prenom']; ?>
+				<?php echo $carte['Client']['prenom']; ?>
 			</td>
 		</tr>
 		<tr>
@@ -42,7 +43,7 @@
 				Numéro
 			</td>
 			<td colspan="3">
-				<?php echo $carte['ca']['id']; ?>
+				<?php echo $carte['Carte']['id']; ?>
 			</td>
 		</tr>
 		<tr>
@@ -50,7 +51,7 @@
 				Date d'achat
 			</td>
 			<td colspan="3">
-				<?php echo $carte['ca']['date_achat']; ?>
+				<?php echo $carte['Carte']['date_achat']; ?>
 			</td>
 		</tr>
 		<tr>
@@ -58,7 +59,7 @@
 				Email
 			</td>
 			<td colspan="3">
-				<?php echo $carte['cl']['email']; ?>
+				<?php echo $carte['Client']['email']; ?>
 			</td>
 		</tr>
 		<tr>
@@ -66,7 +67,7 @@
 				Tel portable
 			</td>
 			<td colspan="3">
-				<?php echo $carte['cl']['telephone_portable']; ?>
+				<?php echo $carte['Client']['telephone_portable']; ?>
 			</td>
 		</tr>
 		<tr>
@@ -74,7 +75,7 @@
 				Crédit acheté
 			</td>
 			<td colspan="3">
-				<?php echo $carte['ca']['credit']; ?>
+				<?php echo $carte['Carte']['credit']; ?>
 			</td>
 		</tr>
 		<tr>
@@ -82,7 +83,7 @@
 				Crédit restant
 			</td>
 			<td colspan="3">
-				<?php echo $carte['ca']['credit_restant']; ?>
+				<?php echo $carte['Carte']['credit_restant']; ?>
 			</td>
 		</tr>
 		<tr>
@@ -91,7 +92,7 @@
 			</td>
 			<td colspan="3">
 				<?php 
-				if ($carte['ca']['facturee']==0)
+				if ($carte['Carte']['facturee']==0)
 					echo 'Non';
 				else
 					echo 'Oui';
@@ -99,10 +100,10 @@
 			</td>
 		</tr>
 		<tr>
-			<td colspan="2" rowspan="<?php echo count($i)+1?>">
+			<td colspan="2" rowspan="<?php echo count($carte['Intervention'])+1?>">
 				Intervention(s)
 			</td>
-		<?php if (count($i)>0){ ?>
+		<?php if (count($carte['Intervention'])>0){ ?>
 			<th>
 				Date
 			</th>
@@ -110,16 +111,16 @@
 				Crédit utilisé
 			</th>
 		</tr>
-		<?php foreach ($i as $inter){ ?>
+		<?php foreach ($carte['Intervention'] as $inter){ ?>
 		<tr>
 			<td>
-				<?php echo $inter['i']['date']; ?>
+				<?php echo $inter['date']; ?>
 			</td>
 			<td>
-				<?php echo $inter['i']['credit_utilise']; ?>
+				<?php echo $inter['credit_utilise']; ?>
 			</td>
 		</tr>
-		<?php unset($i);}}
+		<?php unset($inter);}}
 		else { ?>
 			<td colspan="3">
 				Pas encore d'intervention

@@ -7,6 +7,8 @@ class Carte extends AppModel{
 	public $name = 'Carte';
 	public $belongsTo = 'Client';
 	public $hasMany = 'Intervention';
+	public $actsAs = array('Containable');
+
 
 	public function get_carte_client($client_id = null){
 		if ($client_id == null)

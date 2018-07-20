@@ -12,6 +12,9 @@
 	
 </head>
 <body>
+
+	<?php include '/../Menu/menu.ctp';?>
+	
 	<table>
 		<tr>
 			<th colspan="5">Réparations par date</th>
@@ -23,27 +26,26 @@
 			<th>Date d'échéance</th>
 			<th>Finie ?</th>
 		</tr>
-		<!--?php print_r($data);?-->
-		<!--?php print_r($client);?-->
+		<!--?php print_r($rep);?-->
 
 		<?php foreach ($rep as $r){ ?>
 				<tr>
 					<td>
-						<?php echo $this->Html->link($r['r']['id'],
-                    array('controller' => 'reparations', 'action' => 'reparation', $r['r']['id'])); ?>
+						<?php echo $this->Html->link($r['Reparation']['id'],
+                    array('controller' => 'reparations', 'action' => 'reparation', $r['Reparation']['id'])); ?>
 					</td>
 					<td>
-						<?php echo $r['cl']['nom']." ".$r['cl']['prenom']; ?>
+						<?php echo $r['Produit']['Client']['nom']." ".$r['Produit']['Client']['prenom']; ?>
 					</td>
 					<td>
-						<?php echo $r['m']['nom_modele']; ?>
+						<?php echo $r['Produit']['Modele']['nom_modele']; ?>
 					</td>
 					<td>
-						<?php echo $r['r']['date_echeance']; ?>
+						<?php echo $r['Reparation']['date_echeance']; ?>
 					</td>
 					<td>
 						
-						<div class="<?php echo $r['r']['finie']?'cercle_vert':'cercle_rouge'?>"></div>
+						<div class="<?php echo $r['Reparation']['finie']?'cercle_vert':'cercle_rouge'?>"></div>
 					</td>
 				</tr>
 			<?php }?>
