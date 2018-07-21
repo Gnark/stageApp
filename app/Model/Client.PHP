@@ -13,7 +13,16 @@ class Client extends AppModel{
 	public $actsAs = array('Containable'); 
 
 
-	public function get_info_all_clients(){
+	public function get_nb_tags($id = null){
+		if ($id == null)
+        	throw new NotFoundException(__('Client non valide'));
+        return $this->query("SELECT count(1) 
+        	FROM tags
+        	WHERE client_id = ".$id
+        	);
+	}
+
+	/*public function get_info_all_clients(){
 
 		return $this->query('SELECT id, nom, prenom, email
 							FROM clients');
@@ -31,14 +40,6 @@ class Client extends AppModel{
         return $client_complet;
 	}
 
-	public function get_nb_tags($id = null){
-		if ($id == null)
-        	throw new NotFoundException(__('Client non valide'));
-        return $this->query("SELECT count(1) 
-        	FROM tags
-        	WHERE client_id = ".$id
-        	);
-	}
 
 	public function get_produits_client($id = null){
 		if ($id == null)
@@ -62,7 +63,7 @@ class Client extends AppModel{
         return $this->query("SELECT nom, prenom
         			FROM clients
         			WHERE id = ".$id)[0]['clients'];
-	}
+	}*/
 
 }
 

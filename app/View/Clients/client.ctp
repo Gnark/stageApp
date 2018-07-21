@@ -18,57 +18,57 @@
 	
 	<table class="entier">
 		<tr>
-			<th colspan="4">Informations du Client</th>
+			<th colspan="5">Informations du Client</th>
 		</tr>
 		<tr>
 			<td>
 				Nom
 			</td>
-			<td colspan="3">
+			<td colspan="4">
 				<!--?php print_r($data_client);?-->
 				<!--?php print_r($produits_client);?-->
 				<!--?php print_r($fiches_client);?-->
-				<?php echo $data_client['cl']['nom']; ?>
+				<?php echo $data_client['Client']['nom']; ?>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				Prénom
 			</td>
-			<td colspan="3">
-				<?php echo $data_client['cl']['prenom']; ?>
+			<td colspan="4">
+				<?php echo $data_client['Client']['prenom']; ?>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				Adresse
 			</td>
-			<td colspan="3">
-				<?php echo $data_client['adr']['rue']['numero']." ".$data_client['adr']['rue']['nom_rue'].", ".$data_client['adr']['ville']['code_postal'] ?>
+			<td colspan="4">
+				<?php echo $data_client['Adresse']['numero']." ".$data_client['Adresse']['nom_rue'].", ".$data_client['Adresse']['Ville']['code_postal'] ?>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				E-mail
 			</td>
-			<td colspan="3">
-				<?php echo $data_client['cl']['email'] ?>
+			<td colspan="4">
+				<?php echo $data_client['Client']['email'] ?>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				Numéro de portable
 			</td>
-			<td colspan="3">
-				<?php echo $data_client['cl']['telephone_portable'] ?>
+			<td colspan="4">
+				<?php echo $data_client['Client']['telephone_portable'] ?>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				Numéro de fixe
 			</td>
-			<td colspan="3">
-				<?php echo $data_client['cl']['telephone_fixe'] ?>
+			<td colspan="4">
+				<?php echo $data_client['Client']['telephone_fixe'] ?>
 			</td>
 		</tr>
 		<tr>
@@ -78,36 +78,45 @@
 			<td>
 				<?php echo $nb_tags ?>
 			</td>
-			<td colspan="2">
+			<td colspan="3">
 				<?php echo $this->Html->link('Voir les tags',
-				array('controller' => 'tags', 'action' => 'all_tags_client', $data_client['cl']['id'])); ?>
+				array('controller' => 'tags', 'action' => 'all_tags_client', $data_client['Client']['id'])); ?>
 			</td>
 		</tr>
 
 		<tr>
-			<td rowspan="<?php echo count($produits_client)+1?>">
+			<td rowspan="<?php echo count($data_client['Produit'])+1?>">
 				Appareil(s) lui appartenant : 
 			</td>
 			<th>Type d'appareil</th>
 			<th>Modèle</th>
 			<th>Marque</th>
-			<?php foreach ($produits_client as $pr){ ?>
+			<th>Fiche associée</th>
+			<?php foreach ($data_client['Produit'] as $pr){ ?>
 				<tr>
 					<td>
-						<?php echo $pr['tp']['type']; ?>
+						<?php echo $pr['Modele']['TypeProduit']['type']; ?>
 					</td>
 					<td>
-						<?php echo $pr['m']['nom_modele']; ?>
+						<?php echo $pr['Modele']['nom_modele']; ?>
 					</td>
 					<td>
-						<?php echo $pr['ma']['nom_marque']; ?>
+						<?php echo $pr['Modele']['Marque']['nom_marque']; ?>
+					</td>
+					<td>
+						<?php foreach($data_client['Fiche'] as $f)
+							if ($pr['id']==$f['produit_id'])
+								echo $this->Html->link($f['id'], array('controller' => 'fiches', 'action' => 'fiche', $f['id']));
+							else
+								echo 'Pas de fiche associée';
+						?>
 					</td>
 				</tr>
 			<?php }?>
 		</tr>
 		
-		<tr>
-			<td rowspan="<?php echo count($fiches_client)+1?>">
+		<!-- <tr>
+			<td rowspan="<//?php echo count($data_client['Fiche'])+1?>">
 				Fiche(s) le concernant : 
 			</td>
 			<th>
@@ -120,29 +129,29 @@
 				Créée le
 			</th>
 			
-			<?php foreach ($fiches_client as $pr){ ?>
+			<//?php //foreach ($data_client['Fiche'] as $f){ ?>
 				<tr>
 
 					<td>
-						<?php echo $this->Html->link($pr['f']['id'],
-						array('controller' => 'fiches', 'action' => 'fiche', $pr['f']['id'])); ?>
+						<//?php echo $this->Html->link($f['id'],
+						array('controller' => 'fiches', 'action' => 'fiche', $f['id'])); ?>
 					</td>
 					<td>
-						<?php echo $pr['m']['nom_modele']; ?>
+						<//?php echo $f['Modele']['nom_modele']; ?>
 					</td>
 					<td>
-						<?php echo $pr['f']['date_debut']; ?>
+						<//?php echo $f['Fiche']['date_debut']; ?>
 					</td>
 				</tr>
-			<?php }?>
+			<//?php }?>
 			
-		</tr>
+		</tr> -->
 
 		<tr>
 			<td rowspan="2">
 				Carte
 			</td>
-		<?php if ($data_client['carte']!=null){ ?>
+		<?php if ($data_client['Carte']!=null){ ?>
 			<td>
 				Crédit restant
 			</td>
@@ -153,14 +162,14 @@
 		
 		<tr>
 			<td>
-				<?php echo $data_client['carte']['credit_restant']?>
+				<?php echo $data_client['Carte']['credit_restant']?>
 			</td> 
 			<td>
-				<?php echo $data_client['carte']['facturee']?'oui':'non' ?>
+				<?php echo $data_client['Carte']['facturee']?'oui':'non' ?>
 			</td>
 			<td>
 				<?php echo $this->Html->link('Voir la carte',
-                    array('controller' => 'cartes', 'action' => 'carte_client', $data_client['cl']['id']));
+                    array('controller' => 'cartes', 'action' => 'carte_client', $data_client['Client']['id']));
                 ?>
 			</td>
 

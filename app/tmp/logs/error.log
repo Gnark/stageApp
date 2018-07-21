@@ -9893,3 +9893,204 @@ Stack Trace:
 #3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2018-07-21 07:06:08 Error: [MissingControllerException] Controller class Home.cssController could not be found.
+Exception Attributes: array (
+  'class' => 'Home.cssController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/home.css
+Stack Trace:
+#0 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-07-21 07:23:50 Error: [MissingControllerException] Controller class ClientController could not be found.
+Exception Attributes: array (
+  'class' => 'ClientController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/Client/client/42
+Stack Trace:
+#0 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-07-21 07:25:20 Error: [MissingControllerException] Controller class ClientController could not be found.
+Exception Attributes: array (
+  'class' => 'ClientController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/Client/client/42
+Stack Trace:
+#0 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-07-21 07:25:26 Error: [MissingControllerException] Controller class ClientController could not be found.
+Exception Attributes: array (
+  'class' => 'ClientController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/Client/client/42
+Stack Trace:
+#0 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-07-21 07:26:36 Error: [MissingControllerException] Controller class ClientController could not be found.
+Exception Attributes: array (
+  'class' => 'ClientController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/Client/client/42
+Stack Trace:
+#0 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-07-21 07:27:13 Error: [MissingControllerException] Controller class ClientController could not be found.
+Exception Attributes: array (
+  'class' => 'ClientController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/Client/client/42
+Stack Trace:
+#0 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-07-21 07:28:08 Error: [MissingControllerException] Controller class ClientController could not be found.
+Exception Attributes: array (
+  'class' => 'ClientController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/Client/client/42
+Stack Trace:
+#0 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-07-21 07:44:08 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 Erreur de syntaxe près de 'get_nb_tags' à la ligne 1
+Request URL: /cakephp/clients/client/42
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(472): PDOStatement->execute(Array)
+#1 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(438): DboSource->_execute('get_nb_tags', Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(675): DboSource->execute('get_nb_tags', Array, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(618): DboSource->fetchAll('get_nb_tags', Array, Array)
+#4 C:\wamp64\www\cakephp\lib\Cake\Model\Model.php(834): DboSource->query('get_nb_tags', Array, Object(Client))
+#5 C:\wamp64\www\cakephp\app\Controller\ClientsController.php(25): Model->__call('get_nb_tags', Array)
+#6 C:\wamp64\www\cakephp\app\Controller\ClientsController.php(25): Client->get_nb_tags('42')
+#7 [internal function]: ClientsController->client('42')
+#8 C:\wamp64\www\cakephp\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#9 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#11 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2018-07-21 07:57:02 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 Erreur de syntaxe près de 'get_identite_client' à la ligne 1
+Request URL: /cakephp/tags/all_tags_client/42
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(472): PDOStatement->execute(Array)
+#1 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(438): DboSource->_execute('get_identite_cl...', Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(675): DboSource->execute('get_identite_cl...', Array, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(618): DboSource->fetchAll('get_identite_cl...', Array, Array)
+#4 C:\wamp64\www\cakephp\lib\Cake\Model\Model.php(834): DboSource->query('get_identite_cl...', Array, Object(Client))
+#5 C:\wamp64\www\cakephp\app\Controller\TagsController.php(13): Model->__call('get_identite_cl...', Array)
+#6 C:\wamp64\www\cakephp\app\Controller\TagsController.php(13): Client->get_identite_client('42')
+#7 [internal function]: TagsController->all_tags_client('42')
+#8 C:\wamp64\www\cakephp\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(TagsController), Array)
+#9 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TagsController), Object(CakeRequest))
+#11 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2018-07-21 08:21:02 Error: Fatal Error (4): syntax error, unexpected '$data_client' (T_VARIABLE) in [C:\wamp64\www\cakephp\app\Controller\ClientsController.php, line 55]
+2018-07-21 08:21:02 Error: [FatalErrorException] syntax error, unexpected '$data_client' (T_VARIABLE)
+Request URL: /cakephp/clients/client/42
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 55)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 55, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 55, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-07-21 08:21:38 Error: Fatal Error (4): syntax error, unexpected ''Fiche'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\wamp64\www\cakephp\app\Controller\ClientsController.php, line 77]
+2018-07-21 08:21:38 Error: [FatalErrorException] syntax error, unexpected ''Fiche'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /cakephp/clients/client/42
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 77)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 77, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 77, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-07-21 08:21:53 Error: Fatal Error (4): syntax error, unexpected '=', expecting ')' in [C:\wamp64\www\cakephp\app\Controller\ClientsController.php, line 79]
+2018-07-21 08:21:53 Error: [FatalErrorException] syntax error, unexpected '=', expecting ')'
+Request URL: /cakephp/clients/client/42
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 79)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 79, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 79, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-07-21 08:22:12 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp64\www\cakephp\app\Controller\ClientsController.php, line 92]
+2018-07-21 08:22:12 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /cakephp/clients/client/42
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 92)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 92, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 92, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-07-21 08:22:44 Error: Fatal Error (64): Cannot use [] for reading in [C:\wamp64\www\cakephp\app\View\Clients\client.ctp, line 110]
+2018-07-21 08:22:44 Error: [FatalErrorException] Cannot use [] for reading
+Request URL: /cakephp/clients/client/42
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(64, 'Cannot use [] f...', 'C:\\wamp64\\www\\c...', 110)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot use [] f...', 'C:\\wamp64\\www\\c...', 110, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 64, 'Cannot use [] f...', 'C:\\wamp64\\www\\c...', 110, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-07-21 09:56:43 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'fiche.css' inconnu dans where clause
+Request URL: /cakephp/fiches/fiche/fiche.css
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(472): PDOStatement->execute(Array)
+#1 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(438): DboSource->_execute('SELECT * \r\n    ...', Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(675): DboSource->execute('SELECT * \r\n    ...', Array, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('SELECT * \r\n    ...', false)
+#4 [internal function]: DboSource->query('SELECT * \r\n    ...', false)
+#5 C:\wamp64\www\cakephp\lib\Cake\Model\Model.php(3476): call_user_func_array(Array, Array)
+#6 C:\wamp64\www\cakephp\app\Model\Fiche.php(27): Model->query('SELECT * \r\n    ...')
+#7 C:\wamp64\www\cakephp\app\Controller\FichesController.php(129): Fiche->get_info_fiche('fiche.css')
+#8 [internal function]: FichesController->fiche('fiche.css')
+#9 C:\wamp64\www\cakephp\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(FichesController), Array)
+#10 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FichesController), Object(CakeRequest))
+#12 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2018-07-21 09:57:48 Error: Fatal Error (4): syntax error, unexpected ''conditions'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\wamp64\www\cakephp\app\Controller\ClientsController.php, line 81]
+2018-07-21 09:57:48 Error: [FatalErrorException] syntax error, unexpected ''conditions'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /cakephp/clients/client/42
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 81)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 81, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 81, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-07-21 09:57:59 Error: Fatal Error (4): syntax error, unexpected ''conditions'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\wamp64\www\cakephp\app\Controller\ClientsController.php, line 81]
+2018-07-21 09:57:59 Error: [FatalErrorException] syntax error, unexpected ''conditions'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /cakephp/clients/client/42
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 81)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 81, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 81, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-07-21 09:58:58 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'Client.' inconnu dans field list
+Request URL: /cakephp/clients/client/42
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(472): PDOStatement->execute(Array)
+#1 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(438): DboSource->_execute('SELECT DISTINCT...', Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(675): DboSource->execute('SELECT DISTINCT...', Array, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(1186): DboSource->fetchAll('SELECT DISTINCT...', false)
+#4 C:\wamp64\www\cakephp\lib\Cake\Model\Model.php(3040): DboSource->read(Object(Client), Array)
+#5 C:\wamp64\www\cakephp\lib\Cake\Model\Model.php(3012): Model->_readDataSource('first', Array)
+#6 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(606): Model->find('first', Array)
+#7 C:\wamp64\www\cakephp\lib\Cake\Model\Model.php(834): DboSource->query('findById', Array, Object(Client))
+#8 C:\wamp64\www\cakephp\app\Controller\ClientsController.php(83): Model->__call('findById', Array)
+#9 C:\wamp64\www\cakephp\app\Controller\ClientsController.php(83): Client->findById('42', Array)
+#10 [internal function]: ClientsController->client('42')
+#11 C:\wamp64\www\cakephp\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#12 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#14 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}

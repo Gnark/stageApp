@@ -28,7 +28,7 @@ class ClientsController extends AppController{
         $this->set('produits_client', $this->Client->get_produits_client($id));
         $this->set('fiches_client', $this->Fiche->get_fiches_client($id));*/
 
-        "SELECT id, nom, prenom, email, telephone_fixe, telephone_portable, adresse_id
+        /*"SELECT id, nom, prenom, email, telephone_fixe, telephone_portable, adresse_id
         					FROM clients
         					WHERE id = ".$id)
 		"SELECT id, credit_restant, facturee
@@ -44,18 +44,44 @@ class ClientsController extends AppController{
         					AND m.type_produit_id = tp.id
         					AND pr.client_id = ".$client_id
 
+        "SELECT f.id, m.nom_modele, f.date_debut
+    					FROM fiches f, produits pr, modeles m, clients cl
+    					WHERE f.client_id = ".$client_id."
+    					AND f.client_id = cl.id
+    					AND f.produit_id = pr.id
+    					AND pr.modele_id = m.id"*/
+
         $data_client = $this->Client->find('all', array(
 			'contain' => array(
 				'Carte' => array(
 					'fields' => array('id', 'credit_restant', 'facturee')
 				),
-				/*'Intervention' => array(
-					'fields' => array('date', 'credit_utilise')
+				'Produit' => array(
+					'fields' => array('id'),
+					'Modele' => array(
+						'fields' => array('nom_modele'),
+						'TypeProduit' => array(
+							'fields' => array('type')
+						),
+						'Marque' => array(
+							'fields' => array('nom_marque')
+						)
 					)
-				)*/
-			'conditions' => array('Client.id =' => $id),
+				),
+				'Adresse' => array(
+					'fields' => array('numero', 'nom_rue'),
+					'Ville' => array(
+						'fields' => array('nom_ville', 'code_postal')
+					)
+				),
+				'Fiche' => array(
+					'fields' => array('id', 'date_debut', 'produit_id')
+				),
+			),
+			//'conditions' => array('Client.id =' => $id),
 			'fields' => array('id', 'nom', 'prenom', 'email', 'telephone_fixe', 'telephone_portable', 'adresse_id')
 		));
+		$this->set('data_client', $data_client[0]);
 	}
 
 	public function modif_client($id = null){

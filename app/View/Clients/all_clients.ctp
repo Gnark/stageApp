@@ -31,7 +31,7 @@
 				<td>
 					
 					<?php echo $this->Html->link($client['Client']['nom'],
-					array('controller' => 'Client', 'action' => 'client', $client['Client']['id'])); ?>
+					array('controller' => 'clients', 'action' => 'client', $client['Client']['id'])); ?>
 					
 				</td>
 				<td>
@@ -47,7 +47,7 @@
 
 					<?php //afficher que si role = admin
 					echo $this->Html->link('Modifer client',
-						array('controller' => 'Client', 'action' => 'modif_client', $client['Client']['id']))
+						array('controller' => 'clients', 'action' => 'modif_client', $client['Client']['id']))
 						?>
 					</td>
 				</tr>
