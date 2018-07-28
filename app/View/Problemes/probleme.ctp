@@ -13,8 +13,6 @@
 </head>
 <body>
 
-	<?php include '/../Menu/menu.ctp';?>
-
 	<table class="entier">
 		<tr>
 			<th colspan="2">Informations du problème</th>

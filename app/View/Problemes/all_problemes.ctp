@@ -13,8 +13,6 @@
 </head>
 <body>
 
-	<?php include '/../Menu/menu.ctp';?>
-
 	<table>
 		<tr>
 			<th>Id probleme</th>

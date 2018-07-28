@@ -10,11 +10,9 @@
 
 	<title>Client</title>
 
-	<link href="" rel="stylesheet">
+	<?php echo $this->Html->css('bootstrap') ;?>
 </head>
 <body>
-
-	<?php include '/../Menu/menu.ctp';?>
 	
 	<table class="entier">
 		<tr>

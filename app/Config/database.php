@@ -74,7 +74,7 @@ class DATABASE_CONFIG {
 		'password' => '',
 		'database' => 'fiche_de_prise_en_charge_materiel',
 		'prefix' => '',
-		//'encoding' => 'utf8',
+		'encoding' => 'utf8',
 	);
 
 	public $test = array(

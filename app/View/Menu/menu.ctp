@@ -1,3 +1,12 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <?php echo $this->Html->css('home') ;?>
+  <?php echo $this->Html->css('bootstrap') ;?>
+  <?php echo $this->fetch('css'); ?>
+
+</head>
+
 <nav class="col-md-2 d-none d-md-block bg-light sidebar">
   <div class="sidebar-sticky">
     <ul class="nav flex-column">
@@ -9,7 +18,7 @@
       </li>
       <li class="nav-item">
         <span data-feather="camera"></span>
-        <?php echo $this->Html->link('Produit',
+        <?php echo $this->Html->link('Produits',
         array('controller' => 'produits', 'action' => 'all_produits')); ?>  
       </li>
       <li class="nav-item">
@@ -41,7 +50,10 @@
   </div>
 </nav>
 
+
+
 <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
 <script>
   feather.replace()
 </script>
+
