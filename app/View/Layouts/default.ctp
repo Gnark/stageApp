@@ -16,7 +16,7 @@
 
 </head>
 
-<body>
+<body <?php //if(!$this->Session->check('Auth.User.id')) echo 'class="text-center"'; ?> >
 
 	<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
 		<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">facilearetenir.com</a>
@@ -28,24 +28,34 @@
 					<?php echo $this->Html->link('Se déconnecter', array('controller' => 'users', 'action' => 'logout'));?>
 				</li>
 			
-			<?php else : ?>
-				<li class="nav-item text-nowrap">
-					<?php echo $this->Html->link('Se connecter', array('controller' => 'users', 'action' => 'login'));?>
-				</li>
+			<!--?php else : ?-->
+				<!--li class="nav-item text-nowrap"-->
+					<!--?php echo $this->Html->link('Se connecter', array('controller' => 'users', 'action' => 'login'));?-->
+				<!--/li-->
 			<?php endif ?>
 			</ul>
 		</nav>
-
+		<!--?php debug($this->Session->read('Auth.User')); ?-->
 		<div class="container-fluid">
 			<div class="row">
+				<!--?php if($this->Session->check('Auth.User')) : ?-->
 				<nav class="col-md-2 d-none d-md-block bg-light sidebar">
 					<div class="sidebar-sticky">
 						<ul class="nav flex-column">
+
+							<?php if(isset($user) && $user['role']=='user') : ?>
+								<li class="nav-item">
+								<span data-feather="user"></span>
+								<span class="sr-only">(current)</span>
+								<?php echo $this->Html->link('Voir mes infos client',
+								array('controller' => 'clients', 'action' => 'client', $user['id'])); ?>  
+							</li>
+							<?php endif; ?>
 							<li class="nav-item">
 								<span data-feather="home"></span>
 								<span class="sr-only">(current)</span>
 								<?php echo $this->Html->link('Page d\'accueil',
-								array('controller' => 'pages', 'action' => 'home')); ?>  
+								array('controller' => 'users', 'action' => 'home')); ?>  
 							</li>
 							<li class="nav-item">
 								<span data-feather="tag"></span>
@@ -86,9 +96,12 @@
 						</ul>
 					</div>
 				</nav>
+				<!--?php endif; ?-->
 
 				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">				
-					<div class="row"><?php echo $this->fetch('content'); ?></div>
+					<div class="row">
+						<?php echo $this->fetch('content'); ?>							
+					</div>
 				</main>
 			</div>
 		</div>

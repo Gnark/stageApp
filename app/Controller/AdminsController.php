@@ -2,9 +2,13 @@
 
 class AdminsController extends AppController{
 	
-	public isAuthorized($user = null){
+	public function isAuthorized($user = null){
 		parent::isAuthorized($user);
 		return $user['role'] == 'admin';
+	}
+
+	public function home(){
+
 	}
 
 

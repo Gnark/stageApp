@@ -32,11 +32,15 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
-	public $components = array('DebugKit.Toolbar',
+	public $components = array(
+		'DebugKit.Toolbar',
 		'Session',
+		'Flash',
 		'Auth' => array(
 			'authorize' => array('Controller')
-		));
+		)/*,
+		'Security'*/
+	);
 
 	public function beforeFilter(){
 		parent::beforeFilter();

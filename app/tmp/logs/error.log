@@ -10802,3 +10802,339 @@ Stack Trace:
 #3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2018-07-31 12:42:13 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\wamp64\www\cakephp\app\Controller\UsersController.php, line 40]
+2018-07-31 12:42:13 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /cakephp/users/inscription
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 40, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 40, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-07-31 12:43:07 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\wamp64\www\cakephp\app\Controller\UsersController.php, line 40]
+2018-07-31 12:43:07 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /cakephp/users/inscription
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 40, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 40, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-07-31 13:57:46 Error: [AuthSecurityException] '_Token' was not found in request data.
+Request URL: /cakephp/users/inscription
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Controller\Component\SecurityComponent.php(490): SecurityComponent->_validToken(Object(UsersController))
+#1 C:\wamp64\www\cakephp\lib\Cake\Controller\Component\SecurityComponent.php(247): SecurityComponent->_validatePost(Object(UsersController))
+#2 [internal function]: SecurityComponent->startup(Object(UsersController))
+#3 C:\wamp64\www\cakephp\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 C:\wamp64\www\cakephp\lib\Cake\Event\CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#6 C:\wamp64\www\cakephp\lib\Cake\Controller\Controller.php(678): CakeEventManager->dispatch(Object(CakeEvent))
+#7 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#8 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2018-07-31 14:09:56 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\wamp64\www\cakephp\app\Controller\UsersController.php, line 9]
+2018-07-31 14:09:56 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /cakephp/users/login
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 9, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 9, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-07-31 14:10:11 Error: [SecurityException] The request method must be POST
+Request URL: /cakephp/users/login
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Controller\Component\SecurityComponent.php(232): SecurityComponent->_methodsRequired(Object(UsersController))
+#1 [internal function]: SecurityComponent->startup(Object(UsersController))
+#2 C:\wamp64\www\cakephp\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp64\www\cakephp\lib\Cake\Event\CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp64\www\cakephp\lib\Cake\Controller\Controller.php(678): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#7 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2018-07-31 15:48:33 Error: [SecurityException] The request method must be POST
+Request URL: /cakephp/users/login
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Controller\Component\SecurityComponent.php(232): SecurityComponent->_methodsRequired(Object(UsersController))
+#1 [internal function]: SecurityComponent->startup(Object(UsersController))
+#2 C:\wamp64\www\cakephp\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp64\www\cakephp\lib\Cake\Event\CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp64\www\cakephp\lib\Cake\Controller\Controller.php(678): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#7 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2018-07-31 15:49:04 Error: Fatal Error (1): Call to a member function requirePost() on null in [C:\wamp64\www\cakephp\app\Controller\UsersController.php, line 8]
+2018-07-31 15:49:04 Error: [FatalErrorException] Call to a member function requirePost() on null
+Request URL: /cakephp/users/login
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp64\\www\\c...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp64\\www\\c...', 8, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp64\\www\\c...', 8, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-01 15:29:23 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\wamp64\www\cakephp\app\Controller\UsersController.php, line 45]
+2018-08-01 15:29:23 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /cakephp/users/login
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 45)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 45, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 45, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-01 15:40:29 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [C:\wamp64\www\cakephp\app\Controller\UsersController.php, line 48]
+2018-08-01 15:40:29 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /cakephp/users/inscription
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 48)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 48, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 48, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-01 15:51:48 Error: Fatal Error (4): syntax error, unexpected 'if' (T_IF) in [C:\wamp64\www\cakephp\app\Controller\UsersController.php, line 43]
+2018-08-01 15:51:48 Error: [FatalErrorException] syntax error, unexpected 'if' (T_IF)
+Request URL: /cakephp/users/inscription
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 43)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 43, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 43, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-02 08:16:26 Error: Fatal Error (1): Call to a member function set() on null in [C:\wamp64\www\cakephp\app\Controller\UsersController.php, line 51]
+2018-08-02 08:16:26 Error: [FatalErrorException] Call to a member function set() on null
+Request URL: /cakephp/users/inscription
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp64\\www\\c...', 51)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp64\\www\\c...', 51, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp64\\www\\c...', 51, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-02 08:20:56 Error: Fatal Error (1): Unsupported operand types in [C:\wamp64\www\cakephp\lib\Cake\Controller\Component\FlashComponent.php, line 73]
+2018-08-02 08:20:56 Error: [FatalErrorException] Unsupported operand types
+Request URL: /cakephp/users/inscription
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Unsupported ope...', 'C:\\wamp64\\www\\c...', 73)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', 'C:\\wamp64\\www\\c...', 73, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', 'C:\\wamp64\\www\\c...', 73, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-02 08:39:39 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp64\www\cakephp\app\Controller\UsersController.php, line 56]
+2018-08-02 08:39:39 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /cakephp/users/inscription
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 56)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 56, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 56, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-02 08:44:49 Error: [MissingActionException] Action ProduitsController::all_fiche.css() could not be found.
+Exception Attributes: array (
+  'controller' => 'ProduitsController',
+  'action' => 'all_fiche.css',
+)
+Request URL: /cakephp/produits/all_fiche.css
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProduitsController), Object(CakeRequest))
+#2 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-08-02 08:48:10 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 48294972 bytes) in [C:\wamp64\www\cakephp\lib\Cake\Utility\Debugger.php, line 603]
+2018-08-02 08:48:10 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 48294972 bytes)
+Request URL: /cakephp/pages/home
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\\wamp64\\www\\c...', 603)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\\wamp64\\www\\c...', 603, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\\wamp64\\www\\c...', 603, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-02 08:49:28 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 48168866 bytes) in [C:\wamp64\www\cakephp\lib\Cake\Utility\Debugger.php, line 603]
+2018-08-02 08:49:28 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 48168866 bytes)
+Request URL: /cakephp/
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\\wamp64\\www\\c...', 603)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\\wamp64\\www\\c...', 603, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\\wamp64\\www\\c...', 603, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-02 08:51:53 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 48164652 bytes) in [C:\wamp64\www\cakephp\lib\Cake\Utility\Debugger.php, line 603]
+2018-08-02 08:51:53 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 48164652 bytes)
+Request URL: /cakephp/
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\\wamp64\\www\\c...', 603)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\\wamp64\\www\\c...', 603, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\\wamp64\\www\\c...', 603, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-02 08:53:20 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 48164652 bytes) in [C:\wamp64\www\cakephp\lib\Cake\Utility\Debugger.php, line 603]
+2018-08-02 08:53:20 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 48164652 bytes)
+Request URL: /cakephp/
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\\wamp64\\www\\c...', 603)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\\wamp64\\www\\c...', 603, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\\wamp64\\www\\c...', 603, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-02 08:53:56 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 44055514 bytes) in [C:\wamp64\www\cakephp\lib\Cake\Utility\Debugger.php, line 603]
+2018-08-02 08:53:56 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 44055514 bytes)
+Request URL: /cakephp/
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\\wamp64\\www\\c...', 603)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\\wamp64\\www\\c...', 603, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\\wamp64\\www\\c...', 603, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-02 09:51:20 Error: [MissingActionException] Action PagesController::home() could not be found.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'home',
+)
+Request URL: /cakephp/
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#2 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-08-02 12:07:10 Error: [MissingActionException] Action PagesController::home() could not be found.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'home',
+)
+Request URL: /cakephp/
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#2 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-08-02 12:07:25 Error: [MissingViewException] View file "Users\home.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users\\home.ctp',
+)
+Request URL: /cakephp/
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp64\www\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-08-02 12:15:36 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 40681040 bytes) in [C:\wamp64\www\cakephp\lib\Cake\Utility\Debugger.php, line 603]
+2018-08-02 12:15:36 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 40681040 bytes)
+Request URL: /cakephp/
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\\wamp64\\www\\c...', 603)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\\wamp64\\www\\c...', 603, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\\wamp64\\www\\c...', 603, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-02 13:42:11 Error: Fatal Error (4): syntax error, unexpected 'endif' (T_ENDIF) in [C:\wamp64\www\cakephp\app\View\Layouts\default.ctp, line 105]
+2018-08-02 13:42:11 Error: [FatalErrorException] syntax error, unexpected 'endif' (T_ENDIF)
+Request URL: /cakephp/users/login
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 105)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 105, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 105, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-02 13:42:24 Error: Fatal Error (4): syntax error, unexpected 'endif' (T_ENDIF) in [C:\wamp64\www\cakephp\app\View\Layouts\default.ctp, line 105]
+2018-08-02 13:42:24 Error: [FatalErrorException] syntax error, unexpected 'endif' (T_ENDIF)
+Request URL: /cakephp/users/login
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 105)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 105, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 105, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-02 13:42:41 Error: Fatal Error (4): syntax error, unexpected 'endif' (T_ENDIF) in [C:\wamp64\www\cakephp\app\View\Layouts\default.ctp, line 105]
+2018-08-02 13:42:41 Error: [FatalErrorException] syntax error, unexpected 'endif' (T_ENDIF)
+Request URL: /cakephp/users/login
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 105)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 105, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 105, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-02 14:13:23 Error: Fatal Error (4): syntax error, unexpected 'if' (T_IF) in [C:\wamp64\www\cakephp\app\View\Layouts\default.ctp, line 19]
+2018-08-02 14:13:23 Error: [FatalErrorException] syntax error, unexpected 'if' (T_IF)
+Request URL: /cakephp/users/login
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 19)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 19, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 19, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-02 14:13:56 Error: Fatal Error (4): syntax error, unexpected 'if' (T_IF) in [C:\wamp64\www\cakephp\app\View\Layouts\default.ctp, line 19]
+2018-08-02 14:13:56 Error: [FatalErrorException] syntax error, unexpected 'if' (T_IF)
+Request URL: /cakephp/users/login
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 19)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 19, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 19, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-02 14:14:13 Error: Fatal Error (4): syntax error, unexpected '?' in [C:\wamp64\www\cakephp\app\View\Layouts\default.ctp, line 19]
+2018-08-02 14:14:13 Error: [FatalErrorException] syntax error, unexpected '?'
+Request URL: /cakephp/users/login
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 19)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 19, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 19, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-02 14:15:10 Error: Fatal Error (4): syntax error, unexpected '==' (T_IS_EQUAL) in [C:\wamp64\www\cakephp\app\View\Layouts\default.ctp, line 19]
+2018-08-02 14:15:10 Error: [FatalErrorException] syntax error, unexpected '==' (T_IS_EQUAL)
+Request URL: /cakephp/users/login
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 19)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 19, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 19, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-02 15:56:56 Error: Fatal Error (4): syntax error, unexpected 'isAuthorized' (T_STRING), expecting variable (T_VARIABLE) in [C:\wamp64\www\cakephp\app\Controller\AdminsController.php, line 5]
+2018-08-02 15:56:56 Error: [FatalErrorException] syntax error, unexpected 'isAuthorized' (T_STRING), expecting variable (T_VARIABLE)
+Request URL: /cakephp/admins/home
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 5)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 5, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 5, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-02 15:57:53 Error: [MissingActionException] Action ProduitsController::all_fiche.css() could not be found.
+Exception Attributes: array (
+  'controller' => 'ProduitsController',
+  'action' => 'all_fiche.css',
+)
+Request URL: /cakephp/produits/all_fiche.css
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProduitsController), Object(CakeRequest))
+#2 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

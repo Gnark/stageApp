@@ -18,10 +18,10 @@
     <button class="btn btn-lg btn-primary btn-block" type="submit">Connexion</button>
   </form-->
 
-  <?php echo $this->Form->create('User', array('class' => 'form-signin')); ?>
+  <?php echo $this->Form->create('User', array('class' => 'form-signin center-block')); ?>
   <h1 class="h3 mb-3 font-weight-normal">Connectez-vous</h1>
-  <?php echo $this->Form->input('username', array('label' => 'Identifiant', array('class' => 'form-control'), 'label' => array('class' => 'sr-only'), 'placeholder' => 'Identifiant', 'autofocus')); ?>
-  <?php echo $this->Form->input('password', array('label' => 'Mot de passe', array('class' => 'form-control'), 'label' => array('class' => 'sr-only'), 'placeholder' => 'Mot de passe')); ?>
+  <?php echo $this->Form->input('username', array('label' => false, array('class' => 'form-control'), 'placeholder' => 'Identifiant', 'autofocus')); ?>
+  <?php echo $this->Form->input('password', array('label' => false, array('class' => 'form-control'), 'placeholder' => 'Mot de passe')); ?>
   <?php echo $this->Html->link('Pas de compte ?', array('controller' => 'users', 'action' => 'inscription')); ?>
   <?php echo $this->Session->flash(); ?>
   <?php echo $this->Form->end(array('label' => 'Connexion', 'class' => 'btn btn-lg btn-primary btn-block')); ?>

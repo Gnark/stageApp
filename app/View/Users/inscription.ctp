@@ -29,12 +29,11 @@
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 
   <?php echo $this->Form->create('User', array('class' => 'form-signin')); ?>
-  <h1 class="h3 mb-3 font-weight-normal">Connectez-vous</h1>
-  <?php echo $this->Form->input('username', array('label' => 'Identifiant', array('class' => 'form-control'), 'label' => array('class' => 'sr-only'), 'placeholder' => 'Identifiant', 'autofocus')); ?>
-  <?php echo $this->Form->input('password', array('label' => 'Mot de passe', array('class' => 'form-control'), 'label' => array('class' => 'sr-only'), 'placeholder' => 'Mot de passe')); ?>
-  <?php echo $this->Form->input('password', array('label' => 'Mot de passe', array('class' => 'form-control'), 'label' => array('class' => 'sr-only'), 'placeholder' => 'Mot de passe')); ?>
-  <?php echo $this->Html->link('Pas de compte ?', array('controller' => 'users', 'action' => 'inscription')); ?>
+  <h1 class="h3 mb-3 font-weight-normal">Inscrivez-vous</h1>
+  <?php echo $this->Form->input('username', array('label' => false, array('class' => 'form-control'), 'placeholder' => 'Identifiant', 'autofocus')); ?>
+  <?php echo $this->Form->input('password', array('label' => false, array('class' => 'form-control'), 'placeholder' => 'Mot de passe')); ?>
+  <!--?php echo $this->Form->input('password_ confirm', array('label' => false, 'type' => 'password', array('class' => 'form-control'), 'placeholder' => 'Mot de passe')); ?-->
   <?php echo $this->Session->flash(); ?>
-  <?php echo $this->Form->end(array('label' => 'Connexion', 'class' => 'btn btn-lg btn-primary btn-block')); ?>
+  <?php echo $this->Form->end(array('label' => 'S\'incrire', 'class' => 'btn btn-lg btn-primary btn-block')); ?>
 
 </div>
