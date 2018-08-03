@@ -69,7 +69,7 @@ class ClientsController extends AppController{
 					)
 				),
 				'Adresse' => array(
-					'fields' => array('numero', 'nom_rue'),
+					'fields' => array('numero', 'nom_rue', 'ville_id'),
 					'Ville' => array(
 						'fields' => array('nom_ville', 'code_postal')
 					)
@@ -78,7 +78,7 @@ class ClientsController extends AppController{
 					'fields' => array('id', 'date_debut', 'produit_id')
 				),
 			),
-			//'conditions' => array('Client.id =' => $id),
+			'conditions' => array('Client.id =' => $id),
 			'fields' => array('id', 'nom', 'prenom', 'email', 'telephone_fixe', 'telephone_portable', 'adresse_id')
 		));
 		$this->set('data_client', $data_client[0]);
@@ -92,6 +92,19 @@ class ClientsController extends AppController{
         $this->set('data_client', $this->Client->get_info_client($id));
         $this->set('produits_client', $this->Client->get_produits_client($id));
         $this->set('fiches_client', $this->Fiche->get_fiches_client($id));
+	}
+
+	public function info_user(){
+		//debug($this->Session->read());
+		if($this->Session->read('Auth.User')){
+			$this->Client->recursive=-1;
+			$infos = $this->Client->find('all', array(
+				'conditions' => array('Client.user_id' => $this->Session->read('Auth.User.id'))
+			));
+			debug($infos);
+
+		}
+
 	}
 
 	/*public function client($id = null){

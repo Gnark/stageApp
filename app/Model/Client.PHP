@@ -9,8 +9,7 @@ class Client extends AppModel{
 	public $hasOne='Carte';
 	public $belongsTo=array('Adresse','Probleme');
 
-	public $uses=array('Tag','Adresse');
-	public $actsAs = array('Containable'); 
+	public $uses=array('Tag','Adresse'); 
 
 
 	public function get_nb_tags($id = null){

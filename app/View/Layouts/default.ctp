@@ -22,7 +22,7 @@
 		<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">facilearetenir.com</a>
 		<input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
 		<ul class="navbar-nav px-3">
-		<?php if ($this->Session->read('Auth.User.id')) : ?>
+		<?php if ($this->Session->check('Auth.User.id')) : ?>
 			
 				<li class="nav-item text-nowrap">
 					<?php echo $this->Html->link('Se déconnecter', array('controller' => 'users', 'action' => 'logout'));?>
@@ -43,12 +43,12 @@
 					<div class="sidebar-sticky">
 						<ul class="nav flex-column">
 
-							<?php if(isset($user) && $user['role']=='user') : ?>
+							<?php if($this->Session->read('Auth.User')!=null && $this->Session->read('Auth.User.role')=='user') : ?>
 								<li class="nav-item">
 								<span data-feather="user"></span>
 								<span class="sr-only">(current)</span>
 								<?php echo $this->Html->link('Voir mes infos client',
-								array('controller' => 'clients', 'action' => 'client', $user['id'])); ?>  
+								array('controller' => 'clients', 'action' => 'info_user')); ?>  
 							</li>
 							<?php endif; ?>
 							<li class="nav-item">
