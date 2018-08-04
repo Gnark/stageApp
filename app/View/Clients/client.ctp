@@ -1,20 +1,4 @@
-<!doctype html>
-<html lang="fr">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<!--link rel="icon" href="../../../../favicon.ico"--> 
-  </head>
-
-	<title>Client</title>
-
-	<?php echo $this->Html->css('bootstrap') ;?>
-</head>
-<body>
-	
-	<table class="entier">
+<table class="entier">
 		<tr>
 			<th colspan="5">Informations du Client</th>
 		</tr>
@@ -185,4 +169,3 @@
 
 
 
-</body>

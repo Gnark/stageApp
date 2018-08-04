@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
-	<meta name="author" content="">
+	<?php echo $this->fetch('meta'); ?>
+
 	<!--link rel="icon" href="../../../../favicon.ico"-->
 
 	<title><?php echo $title_for_layout; ?></title>
@@ -43,6 +43,12 @@
 					<div class="sidebar-sticky">
 						<ul class="nav flex-column">
 
+							<li class="nav-item">
+								<span data-feather="home"></span>
+								<span class="sr-only">(current)</span>
+								<?php echo $this->Html->link('Page d\'accueil',
+								array('controller' => 'users', 'action' => 'home')); ?>  
+							</li>
 							<?php if($this->Session->read('Auth.User')!=null && $this->Session->read('Auth.User.role')=='user') : ?>
 								<li class="nav-item">
 								<span data-feather="user"></span>
@@ -51,12 +57,6 @@
 								array('controller' => 'clients', 'action' => 'info_user')); ?>  
 							</li>
 							<?php endif; ?>
-							<li class="nav-item">
-								<span data-feather="home"></span>
-								<span class="sr-only">(current)</span>
-								<?php echo $this->Html->link('Page d\'accueil',
-								array('controller' => 'users', 'action' => 'home')); ?>  
-							</li>
 							<li class="nav-item">
 								<span data-feather="tag"></span>
 								<!--<span class="sr-only">(current)</span>-->

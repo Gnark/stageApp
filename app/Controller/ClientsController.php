@@ -9,7 +9,7 @@ class ClientsController extends AppController{
 		$this->set('data',$data);*/
 		$this->Client->recursive = -1;
 		$data = $this->Client->find('all', array(
-				'fields' => array('id', 'nom', 'prenom', 'email')
+			'fields' => array('id', 'nom', 'prenom', 'email')
 
 		));
 		$this->set('data',$data);
@@ -21,9 +21,9 @@ class ClientsController extends AppController{
 
 	public function client($id = null){
 		if ($id == null)
-        	throw new NotFoundException(__('Fiche non valide'));
-        $nb_tags=$this->Client->get_nb_tags($id);
-        $this->set('nb_tags',$nb_tags[0][0]['count(1)']);
+			throw new NotFoundException(__('Fiche non valide'));
+		$nb_tags=$this->Client->get_nb_tags($id);
+		$this->set('nb_tags',$nb_tags[0][0]['count(1)']);
         /*$this->set('data_client', $this->Client->get_info_client($id));
         $this->set('produits_client', $this->Client->get_produits_client($id));
         $this->set('fiches_client', $this->Fiche->get_fiches_client($id));*/
@@ -51,61 +51,94 @@ class ClientsController extends AppController{
     					AND f.produit_id = pr.id
     					AND pr.modele_id = m.id"*/
 
-        $data_client = $this->Client->find('all', array(
-			'contain' => array(
-				'Carte' => array(
-					'fields' => array('id', 'credit_restant', 'facturee')
-				),
-				'Produit' => array(
-					'fields' => array('id'),
-					'Modele' => array(
-						'fields' => array('nom_modele'),
-						'TypeProduit' => array(
-							'fields' => array('type')
-						),
-						'Marque' => array(
-							'fields' => array('nom_marque')
-						)
-					)
-				),
-				'Adresse' => array(
-					'fields' => array('numero', 'nom_rue', 'ville_id'),
-					'Ville' => array(
-						'fields' => array('nom_ville', 'code_postal')
-					)
-				),
-				'Fiche' => array(
-					'fields' => array('id', 'date_debut', 'produit_id')
-				),
-			),
-			'conditions' => array('Client.id =' => $id),
-			'fields' => array('id', 'nom', 'prenom', 'email', 'telephone_fixe', 'telephone_portable', 'adresse_id')
-		));
-		$this->set('data_client', $data_client[0]);
-	}
+    					$data_client = $this->Client->find('all', array(
+    						'contain' => array(
+    							'Carte' => array(
+    								'fields' => array('id', 'credit_restant', 'facturee')
+    							),
+    							'Produit' => array(
+    								'fields' => array('id'),
+    								'Modele' => array(
+    									'fields' => array('nom_modele'),
+    									'TypeProduit' => array(
+    										'fields' => array('type')
+    									),
+    									'Marque' => array(
+    										'fields' => array('nom_marque')
+    									)
+    								)
+    							),
+    							'Adresse' => array(
+    								'fields' => array('numero', 'nom_rue', 'ville_id'),
+    								'Ville' => array(
+    									'fields' => array('nom_ville', 'code_postal')
+    								)
+    							),
+    							'Fiche' => array(
+    								'fields' => array('id', 'date_debut', 'produit_id')
+    							),
+    						),
+    						'conditions' => array('Client.id =' => $id),
+    						'fields' => array('id', 'nom', 'prenom', 'email', 'telephone_fixe', 'telephone_portable', 'adresse_id')
+    					));
+    					$this->set('data_client', $data_client[0]);
+    				}
 
-	public function modif_client($id = null){
-		if ($id == null)
-        	throw new NotFoundException(__('Fiche non valide'));
-        $nb_tags=$this->Client->get_nb_tags($id);
-        $this->set('nb_tags',$nb_tags[0][0]['count(1)']);
-        $this->set('data_client', $this->Client->get_info_client($id));
-        $this->set('produits_client', $this->Client->get_produits_client($id));
-        $this->set('fiches_client', $this->Fiche->get_fiches_client($id));
-	}
+    				public function modif_client($id = null){
+    					if ($id == null)
+    						throw new NotFoundException(__('Fiche non valide'));
+    					$nb_tags=$this->Client->get_nb_tags($id);
+    					$this->set('nb_tags',$nb_tags[0][0]['count(1)']);
+    					$this->set('data_client', $this->Client->get_info_client($id));
+    					$this->set('produits_client', $this->Client->get_produits_client($id));
+    					$this->set('fiches_client', $this->Fiche->get_fiches_client($id));
+    				}
 
-	public function info_user(){
+    				public function info_user(){
 		//debug($this->Session->read());
-		if($this->Session->read('Auth.User')){
-			$this->Client->recursive=-1;
-			$infos = $this->Client->find('all', array(
-				'conditions' => array('Client.user_id' => $this->Session->read('Auth.User.id'))
-			));
-			debug($infos);
+    					if($this->Session->read('Auth.User')){
+    						$this->Client->recursive=-1;
+    						$infos = $this->Client->find('all', array(
+    							'conditions' => array('Client.user_id' => $this->Session->read('Auth.User.id'))
+    						));
+			//debug($infos);
+    						if($infos!=null)
+    							$this->set('infos', $infos[0]['Client']);
 
-		}
+    					}
 
-	}
+    				}
+
+    				public function rentrer_infos(){
+    					if ($this->request->is('post')){
+    						$client = $this->Client->find('all', array(
+    							'conditions' => array('email' => $this->request->data['Client']['email'])
+    						));
+    						if (empty($client)){
+    							$this->Client->create($this->request->data, true);
+    							if($this->Client->save(array('user_id'=>$this->Session->read('Auth.User.id')), true, array('nom', 'prenom', 'email', 'telephone_fixe', 'telephone_portable', 'user_id'))){
+    								$this->Session->setFlash('Inscription réussie', 'alert', array('class' => 'alert-success'));
+    								$this->redirect('/clients/info_user');
+    							}
+    						}
+    						else{
+    							if($client[0]['Client']['nom']==$this->request->data['Client']['nom'] && $client[0]['Client']['prenom']==$this->request->data['Client']['prenom']){
+    								//$this->Session->setFlash('Vos informations sont déjà enregistrées mais pas encore liées à votre compte.', 'alert', array('class' =>'alert-danger'));
+    								$this->Client->save(
+    									array(
+    										'id' =>	$client[0]['Client']['id'],
+    										'user_id' =>$this->Session->read('Auth.User.id')),
+    									true,
+    									array('user_id'));
+    									$this->redirect('/clients/info_user');
+    							}
+    							else 
+    								$this->Session->setFlash('Adresse e-mail déjà utilisée.', 'alert', array('class' =>'alert-danger'));
+    						}
+
+    								
+    					}
+    				}
 
 	/*public function client($id = null){
 		if ($id == null)
