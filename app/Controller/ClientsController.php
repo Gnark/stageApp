@@ -130,13 +130,13 @@ class ClientsController extends AppController{
     										'user_id' =>$this->Session->read('Auth.User.id')),
     									true,
     									array('user_id'));
-    									$this->redirect('/clients/info_user');
+    								$this->redirect('/clients/info_user');
     							}
     							else 
     								$this->Session->setFlash('Adresse e-mail déjà utilisée.', 'alert', array('class' =>'alert-danger'));
     						}
 
-    								
+    						
     					}
     				}
 

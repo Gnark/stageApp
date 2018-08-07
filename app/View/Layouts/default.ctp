@@ -16,7 +16,7 @@
 
 </head>
 
-<body <?php //if(!$this->Session->check('Auth.User.id')) echo 'class="text-center"'; ?> >
+<body>
 
 	<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
 		<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">facilearetenir.com</a>
@@ -53,10 +53,11 @@
 								<li class="nav-item">
 								<span data-feather="user"></span>
 								<span class="sr-only">(current)</span>
-								<?php echo $this->Html->link('Voir mes infos client',
+								<?php echo $this->Html->link('Voir mes informations',
 								array('controller' => 'clients', 'action' => 'info_user')); ?>  
 							</li>
 							<?php endif; ?>
+							<?php if($this->Session->read('Auth.User')!=null && $this->Session->read('Auth.User.role')=='admin') : ?>
 							<li class="nav-item">
 								<span data-feather="tag"></span>
 								<!--<span class="sr-only">(current)</span>-->
@@ -79,6 +80,12 @@
 								array('controller' => 'fiches', 'action' => 'all_fiches')); ?>
 							</li>
 							<li class="nav-item">
+								<span data-feather="clipboard"></span>
+								<!--<span class="sr-only">(current)</span>-->
+								<?php echo $this->Html->link('Reparations',
+								array('controller' => 'reparations', 'action' => 'all_reparations')); ?>  
+							</li>
+							<li class="nav-item">
 								<span data-feather="bar-chart-2"></span>
 								Interventions
 							</li>
@@ -87,12 +94,7 @@
 								<?php echo $this->Html->link('Problèmes connus',
 								array('controller' => 'problemes', 'action' => 'all_problemes')); ?> 
 							</li>
-							<li class="nav-item">
-								<span data-feather="clipboard"></span>
-								<!--<span class="sr-only">(current)</span>-->
-								<?php echo $this->Html->link('Reparations',
-								array('controller' => 'reparations', 'action' => 'all_reparations')); ?>  
-							</li>
+							<?php endif; ?>
 						</ul>
 					</div>
 				</nav>

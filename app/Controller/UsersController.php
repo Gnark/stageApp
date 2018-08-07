@@ -36,6 +36,9 @@ class UsersController extends AppController{
 		return $this->redirect('/');
 	}
 
+	/*
+	Vérife si le username est déjà utilisé, quand inscription réussie redirige vers la page d'accueil
+	*/
 	public function inscription(){
 		//debug($this->request->data);
 		if ($this->request->is('post')){
@@ -62,6 +65,9 @@ class UsersController extends AppController{
 		
 	}
 
+	/*
+	si admin -> redirige vers la page d'accueil d'admin
+	*/
 	public function home(){
 		//debug($this->Session->read('Auth.User'));
 		//juste verifier :
