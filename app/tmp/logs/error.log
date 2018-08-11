@@ -11521,3 +11521,328 @@ Stack Trace:
 #1 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProblemesController), Object(CakeRequest))
 #2 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2018-08-08 09:37:13 Error: [MissingActionException] Action FichesController::all_fiche.css() could not be found.
+Exception Attributes: array (
+  'controller' => 'FichesController',
+  'action' => 'all_fiche.css',
+)
+Request URL: /cakephp/fiches/all_fiche.css
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FichesController), Object(CakeRequest))
+#2 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-08-08 09:55:06 Error: Fatal Error (4): syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in [C:\wamp64\www\cakephp\app\View\Fiches\modif_fiche.ctp, line 19]
+2018-08-08 09:55:06 Error: [FatalErrorException] syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING)
+Request URL: /cakephp/fiches/modif_fiche/1?nom=%3Cpre+class%3D&prenom=%3Cpre+class%3D&adresse=%3Cpre+class%3D&email=%3Cpre+class%3D&type=%3Cpre+class%3D&os=%C3%A0+venir&tag=%C3%A0+venir&mdp=%3Cpre+class%3D&num=09%2F11%2F01&debut=09%2F11%2F01&qui=Billy&fin=12%2F07%2F18&facture=%C3%A0+venir
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 19)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 19, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 19, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-09 07:56:18 Error: [MissingActionException] Action FichesController::all_fiche.css() could not be found.
+Exception Attributes: array (
+  'controller' => 'FichesController',
+  'action' => 'all_fiche.css',
+)
+Request URL: /cakephp/fiches/all_fiche.css
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FichesController), Object(CakeRequest))
+#2 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-08-09 07:56:19 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'fiche.css' inconnu dans where clause
+Request URL: /cakephp/fiches/fiche/fiche.css
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(472): PDOStatement->execute(Array)
+#1 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(438): DboSource->_execute('SELECT * \r\n    ...', Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(675): DboSource->execute('SELECT * \r\n    ...', Array, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('SELECT * \r\n    ...', false)
+#4 [internal function]: DboSource->query('SELECT * \r\n    ...', false)
+#5 C:\wamp64\www\cakephp\lib\Cake\Model\Model.php(3476): call_user_func_array(Array, Array)
+#6 C:\wamp64\www\cakephp\app\Model\Fiche.php(27): Model->query('SELECT * \r\n    ...')
+#7 C:\wamp64\www\cakephp\app\Controller\FichesController.php(136): Fiche->get_info_fiche('fiche.css')
+#8 [internal function]: FichesController->fiche('fiche.css')
+#9 C:\wamp64\www\cakephp\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(FichesController), Array)
+#10 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FichesController), Object(CakeRequest))
+#12 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2018-08-09 09:43:15 Error: [MissingActionException] Action FichesController::all_fiche.css() could not be found.
+Exception Attributes: array (
+  'controller' => 'FichesController',
+  'action' => 'all_fiche.css',
+)
+Request URL: /cakephp/fiches/all_fiche.css
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FichesController), Object(CakeRequest))
+#2 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-08-09 09:43:21 Error: [MissingActionException] Action FichesController::all_fiche.css() could not be found.
+Exception Attributes: array (
+  'controller' => 'FichesController',
+  'action' => 'all_fiche.css',
+)
+Request URL: /cakephp/fiches/all_fiche.css
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FichesController), Object(CakeRequest))
+#2 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-08-09 09:44:45 Error: [MissingActionException] Action FichesController::all_fiche.css() could not be found.
+Exception Attributes: array (
+  'controller' => 'FichesController',
+  'action' => 'all_fiche.css',
+)
+Request URL: /cakephp/fiches/all_fiche.css
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FichesController), Object(CakeRequest))
+#2 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-08-09 13:38:34 Error: [MissingActionException] Action FichesController::all_fiche.css() could not be found.
+Exception Attributes: array (
+  'controller' => 'FichesController',
+  'action' => 'all_fiche.css',
+)
+Request URL: /cakephp/fiches/all_fiche.css
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FichesController), Object(CakeRequest))
+#2 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-08-09 13:38:50 Error: [MissingActionException] Action FichesController::all_fiche.css() could not be found.
+Exception Attributes: array (
+  'controller' => 'FichesController',
+  'action' => 'all_fiche.css',
+)
+Request URL: /cakephp/fiches/all_fiche.css
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FichesController), Object(CakeRequest))
+#2 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-08-09 13:38:52 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'fiche.css' inconnu dans where clause
+Request URL: /cakephp/fiches/fiche/fiche.css
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(472): PDOStatement->execute(Array)
+#1 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(438): DboSource->_execute('SELECT * \r\n    ...', Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(675): DboSource->execute('SELECT * \r\n    ...', Array, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('SELECT * \r\n    ...', false)
+#4 [internal function]: DboSource->query('SELECT * \r\n    ...', false)
+#5 C:\wamp64\www\cakephp\lib\Cake\Model\Model.php(3476): call_user_func_array(Array, Array)
+#6 C:\wamp64\www\cakephp\app\Model\Fiche.php(27): Model->query('SELECT * \r\n    ...')
+#7 C:\wamp64\www\cakephp\app\Controller\FichesController.php(136): Fiche->get_info_fiche('fiche.css')
+#8 [internal function]: FichesController->fiche('fiche.css')
+#9 C:\wamp64\www\cakephp\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(FichesController), Array)
+#10 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FichesController), Object(CakeRequest))
+#12 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2018-08-09 14:18:57 Error: [MissingActionException] Action FichesController::all_fiche.css() could not be found.
+Exception Attributes: array (
+  'controller' => 'FichesController',
+  'action' => 'all_fiche.css',
+)
+Request URL: /cakephp/fiches/all_fiche.css
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FichesController), Object(CakeRequest))
+#2 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-08-10 07:40:54 Error: [MissingActionException] Action FichesController::all_fiche.css() could not be found.
+Exception Attributes: array (
+  'controller' => 'FichesController',
+  'action' => 'all_fiche.css',
+)
+Request URL: /cakephp/fiches/all_fiche.css
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FichesController), Object(CakeRequest))
+#2 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-08-10 08:01:55 Error: Fatal Error (1): Call to a member function find() on null in [C:\wamp64\www\cakephp\app\Controller\FichesController.php, line 100]
+2018-08-10 08:01:55 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /cakephp/fiches/ajouter_fiche
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp64\\www\\c...', 100)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp64\\www\\c...', 100, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp64\\www\\c...', 100, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 08:54:12 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [C:\wamp64\www\cakephp\app\Controller\FichesController.php, line 112]
+2018-08-10 08:54:12 Error: [FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+Request URL: /cakephp/fiches/ajouter_fiche
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 112)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 112, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 112, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 12:05:47 Error: [MissingActionException] Action FichesController::all_fiche.css() could not be found.
+Exception Attributes: array (
+  'controller' => 'FichesController',
+  'action' => 'all_fiche.css',
+)
+Request URL: /cakephp/fiches/all_fiche.css
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FichesController), Object(CakeRequest))
+#2 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-08-10 12:08:07 Error: [MissingActionException] Action FichesController::all_fiche.css() could not be found.
+Exception Attributes: array (
+  'controller' => 'FichesController',
+  'action' => 'all_fiche.css',
+)
+Request URL: /cakephp/fiches/all_fiche.css
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FichesController), Object(CakeRequest))
+#2 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-08-10 12:24:05 Error: Fatal Error (1): Call to a member function find() on null in [C:\wamp64\www\cakephp\app\Controller\FichesController.php, line 103]
+2018-08-10 12:24:05 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /cakephp/fiches/ajouter_fiche
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp64\\www\\c...', 103)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp64\\www\\c...', 103, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp64\\www\\c...', 103, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 12:24:17 Error: [MissingTableException] Table systeme_exploitaions for model SystemeExploitaion was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'systeme_exploitaions',
+  'class' => 'SystemeExploitaion',
+  'ds' => 'default',
+)
+Request URL: /cakephp/fiches/ajouter_fiche
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Model\Model.php(3673): Model->setSource('systeme_exploit...')
+#1 C:\wamp64\www\cakephp\lib\Cake\Model\Model.php(3040): Model->getDataSource()
+#2 C:\wamp64\www\cakephp\lib\Cake\Model\Model.php(3012): Model->_readDataSource('list', Array)
+#3 C:\wamp64\www\cakephp\app\Controller\FichesController.php(105): Model->find('list', Array)
+#4 [internal function]: FichesController->ajouter_fiche()
+#5 C:\wamp64\www\cakephp\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(FichesController), Array)
+#6 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FichesController), Object(CakeRequest))
+#8 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2018-08-10 12:24:48 Error: Fatal Error (64): Cannot redeclare class Client in [C:\wamp64\www\cakephp\app\Model\SystemeExploitation.php, line 10]
+2018-08-10 12:24:48 Error: [FatalErrorException] Cannot redeclare class Client
+Request URL: /cakephp/fiches/ajouter_fiche
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\\wamp64\\www\\c...', 10)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\\wamp64\\www\\c...', 10, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\\wamp64\\www\\c...', 10, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 14:53:35 Error: [MissingActionException] Action FichesController::all_fiche.css() could not be found.
+Exception Attributes: array (
+  'controller' => 'FichesController',
+  'action' => 'all_fiche.css',
+)
+Request URL: /cakephp/fiches/all_fiche.css
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FichesController), Object(CakeRequest))
+#2 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-08-11 07:17:42 Error: [MissingActionException] Action FichesController::all_fiche.css() could not be found.
+Exception Attributes: array (
+  'controller' => 'FichesController',
+  'action' => 'all_fiche.css',
+)
+Request URL: /cakephp/fiches/all_fiche.css
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FichesController), Object(CakeRequest))
+#2 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-08-11 07:34:26 Error: Fatal Error (1): Call to a member function find() on null in [C:\wamp64\www\cakephp\app\Controller\FichesController.php, line 106]
+2018-08-11 07:34:26 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /cakephp/fiches/ajouter_fiche
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp64\\www\\c...', 106)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp64\\www\\c...', 106, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp64\\www\\c...', 106, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-11 07:47:57 Error: [MissingActionException] Action FichesController::all_fiche.css() could not be found.
+Exception Attributes: array (
+  'controller' => 'FichesController',
+  'action' => 'all_fiche.css',
+)
+Request URL: /cakephp/fiches/all_fiche.css
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FichesController), Object(CakeRequest))
+#2 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-08-11 08:45:28 Error: [MissingActionException] Action FichesController::all_fiche.css() could not be found.
+Exception Attributes: array (
+  'controller' => 'FichesController',
+  'action' => 'all_fiche.css',
+)
+Request URL: /cakephp/fiches/all_fiche.css
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FichesController), Object(CakeRequest))
+#2 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-08-11 08:45:30 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'fiche.css' inconnu dans where clause
+Request URL: /cakephp/fiches/fiche/fiche.css
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(472): PDOStatement->execute(Array)
+#1 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(438): DboSource->_execute('SELECT * \r\n    ...', Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(675): DboSource->execute('SELECT * \r\n    ...', Array, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('SELECT * \r\n    ...', false)
+#4 [internal function]: DboSource->query('SELECT * \r\n    ...', false)
+#5 C:\wamp64\www\cakephp\lib\Cake\Model\Model.php(3476): call_user_func_array(Array, Array)
+#6 C:\wamp64\www\cakephp\app\Model\Fiche.php(27): Model->query('SELECT * \r\n    ...')
+#7 C:\wamp64\www\cakephp\app\Controller\FichesController.php(149): Fiche->get_info_fiche('fiche.css')
+#8 [internal function]: FichesController->fiche('fiche.css')
+#9 C:\wamp64\www\cakephp\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(FichesController), Array)
+#10 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FichesController), Object(CakeRequest))
+#12 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2018-08-11 08:45:33 Error: [MissingActionException] Action FichesController::all_fiche.css() could not be found.
+Exception Attributes: array (
+  'controller' => 'FichesController',
+  'action' => 'all_fiche.css',
+)
+Request URL: /cakephp/fiches/all_fiche.css
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FichesController), Object(CakeRequest))
+#2 C:\wamp64\www\cakephp\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-08-11 09:38:01 Error: Fatal Error (1): Call to a member function find() on null in [C:\wamp64\www\cakephp\app\Controller\FichesController.php, line 109]
+2018-08-11 09:38:01 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /cakephp/fiches/ajouter_fiche
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp64\\www\\c...', 109)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp64\\www\\c...', 109, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp64\\www\\c...', 109, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-11 09:38:17 Error: Fatal Error (4): syntax error, unexpected '}', expecting ')' in [C:\wamp64\www\cakephp\app\Model\Admin.php, line 13]
+2018-08-11 09:38:17 Error: [FatalErrorException] syntax error, unexpected '}', expecting ')'
+Request URL: /cakephp/fiches/ajouter_fiche
+Stack Trace:
+#0 C:\wamp64\www\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 13)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 13, Array)
+#2 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp64\\www\\c...', 13, Array)
+#3 C:\wamp64\www\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

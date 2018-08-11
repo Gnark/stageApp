@@ -2,7 +2,7 @@
 
 class FichesController extends AppController {
     public $helpers = array('Html', 'Form');
-    public $uses=array('Fiche','Client','Produit');
+    public $uses=array('Fiche','Client','Produit','TypeProduit','SystemeExploitation','MaterielExterne','Admin');
 
 
     /*public function all_fiches() {
@@ -17,11 +17,11 @@ class FichesController extends AppController {
     /*$this->set('fiches', $this->Fiche->find('all',
                                             'fields' => array('Fiche.id', 'Client.nom', 'Client.prenom', 'Modele.nom_modele', 'Fiche.date_debut'),
 
-                                            ));*/
-    $data=$this->Fiche->get_info_all_fiches();
-    $this->set('data',$data);
+                                        ));*/
+                                        $data=$this->Fiche->get_info_all_fiches();
+                                        $this->set('data',$data);
 
-   }
+                                    }
     //SELECT f.id, f.date_debut, cl.id, cl.nom, cl.prenom FROM clients cl, fiches f WHERE f.client_id = cl.id
 
    /*public function all_fiches() {
@@ -68,34 +68,60 @@ public function get_info_fiche($id = null){
         and adr.id = cl.adresse_id
         and v.id = adr.ville_id
         and adm.id=f.admin_id");
-}*/
+    }*/
 
 
 //ouvre la vue de modification de la fiche de prise en charge modifiable
-public function modif_fiche($id = null) {
-    if (!$id) { //dans if, modifier pour afficher fiche vide à remplir
-        //throw new NotFoundException(__('Fiche non valide'));
-        $data=null;
-        $this->set('data', $data);
-    }
-    else{
-        $fiche = $this->Fiche->findById($id);
-        if (!$fiche) {
-            throw new NotFoundException(__('Fiche non valide'));
+    public function modif_fiche($id = null) {
+        if(empty($this->request->data)){
+            if (!$id) { //dans if, modifier pour afficher fiche vide à remplir
+                //throw new NotFoundException(__('Fiche non valide'));
+                $data=null;
+                $this->set('data', $data);
+            }
+            else{
+                $fiche = $this->Fiche->findById($id);
+                if (!$fiche) {
+                    throw new NotFoundException(__('Fiche non valide'));
+                }
+                //$this->set('fiche', $fiche);
+                $data=$this->Fiche->get_info_fiche($id);
+                $this->set('data',$data[0]);
+            }
         }
-        //$this->set('fiche', $fiche);
-        $data=$this->Fiche->get_info_fiche($id);
-        $this->set('data',$data[0]);
+        debug($this->request->data);
+
     }
 
-}
+    public function ajouter_fiche(){
+        $this->set('clients', $this->Client->find('list', array(
+            'fields' => array('Client.id', 'Client.full_name')
+        )));
+        $this->set('types', $this->TypeProduit->find('list', array(
+            'fields' => array('TypeProduit.id', 'TypeProduit.type')
+        )));
+        $this->set('os', $this->SystemeExploitation->find('list', array(
+            'fields' => array('SystemeExploitation.id', 'SystemeExploitation.os')
+        )));
+        $this->set('materielExternes', $this->MaterielExterne->find('list', array(
+            'fields' => array('MaterielExterne.id', 'MaterielExterne.type')
+        )));
+        $this->set('admins', $this->Admin->find('list', array(
+            'fields' => array('Admin.id', 'Admin.full_name')
+        )));
+        if(!empty($this->request->data)){
+            //save nouvelle fiche
+        }
+    }
+    
+    
 
 
 //ouvre la vue qui affiche la fiche de prise en charge en non-modifiable
-public function fiche($id = null) {
-    if (!$id) {
-        throw new NotFoundException(__('Fiche non valide'));
-    }
+    public function fiche($id = null) {
+        if (!$id) {
+            throw new NotFoundException(__('Fiche non valide'));
+        }
 
     /*$fiche = $this->Fiche->findById($id);
     if (!$fiche) {

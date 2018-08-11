@@ -8,7 +8,7 @@
 					Nom
 				</td>
 				<td colspan="3">
-					<input class="inputText" class="entier" type="text" id="nom" name="nom" value="<?php echo $data['cl']['nom'] ?>" placeholder='Nom' />
+					<input class="inputText" class="entier" type="text" id="nom" name="nom" value="<?php echo $data['cl']['nom']; ?>" placeholder='Nom' />
 				</td>
 			</tr>
 			<tr>
@@ -211,8 +211,7 @@
 				</td>
 			</tr>
 		</table>
-		<input type="submit" name="Valider" name="valider">
-	</form>
+		<?php echo $this->Form->end(array('label' => 'Valider', 'class' => 'btn btn-lg btn-primary btn-block')); ?>
 
 	<?php echo $this->Html->link('Retour',
 	array('controller' => 'fiches', 'action' => 'all_fiches')); ?>
@@ -220,18 +219,6 @@
 	<?php echo $this->Html->link('Réinitialiser', 
 	array('controller' => 'fiches', 'action' => 'modif_fiche', $data['f']['id']))?>
 
-<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 
-  <?php echo $this->Form->create('Client', array('class' => 'form-signin')); ?>
-  <h1 class="h3 mb-3 font-weight-normal">Inscrivez-vous</h1>
-  <?php echo $this->Form->input('nom', array('label' => 'Nom', array('class' => 'form-control'), 'placeholder' => 'Nom', 'autofocus')); ?>
-  <?php echo $this->Form->input('prenom', array('label' => 'Prénom', array('class' => 'form-control'), 'placeholder' => 'Prénom')); ?>
-  <?php echo $this->Form->input('email', array('label' => 'E-mail', array('class' => 'form-control'), 'placeholder' => 'E-mail')); ?>
-  <?php echo $this->Form->input('telephone_fixe', array('label' => 'Fixe', array('class' => 'form-control'), 'placeholder' => 'Téléphone fixe')); ?>
-  <?php echo $this->Form->input('telephone_portable', array('label' => 'Portable', array('class' => 'form-control'), 'placeholder' => 'Téléphone Portable')); ?>
-  <?php echo $this->Session->flash(); ?>
-  <?php echo $this->Form->end(array('label' => 'Enregitrer', 'class' => 'btn btn-lg btn-primary btn-block')); ?>
-
-</div>
 
 

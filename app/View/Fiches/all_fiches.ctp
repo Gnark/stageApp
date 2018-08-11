@@ -62,7 +62,7 @@
 			<?php unset($fiche); ?>
 			<td colspan="5">
 				<?php //afficher que si role = admin
-			echo $this->Html->link('Ajouter fiche', array('controller' => 'fiches', 'action' => 'modif_fiche'))
+			echo $this->Html->link('Ajouter fiche', array('controller' => 'fiches', 'action' => 'ajouter_fiche'))
 			?>
 			</td>
 		</table>

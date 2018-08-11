@@ -9,7 +9,11 @@ class Client extends AppModel{
 	public $hasOne='Carte';
 	public $belongsTo=array('Adresse','Probleme');
 
-	public $uses=array('Tag','Adresse'); 
+	public $uses=array('Tag','Adresse');
+
+	public $virtualFields = array(
+    'full_name' => 'CONCAT(Client.prenom, " ", Client.nom)'
+);
 
 
 	public function get_nb_tags($id = null){
